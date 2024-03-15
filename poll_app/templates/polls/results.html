@@ -1,0 +1,30 @@
+<head>
+    <style type="text/css">
+        body{
+            background:linear-gradient(to bottom,grey,pink,white);
+        }
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        label{
+            line-height: 50px;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color:aliceblue;
+            transition: 0.5s;
+            text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+<h1>{{ question.question_text }}</h1>
+<ul>
+{% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+<a href="{% url 'polls:detail' question.id %}">VOTE AGAIN?</a>
+</body>

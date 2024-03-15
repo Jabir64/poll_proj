@@ -1,0 +1,13 @@
+html{
+    background:linear-gradient(to bottom,grey,pink,white);
+}
+a{
+    text-decoration: none;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+}
+a:hover{
+    color:aliceblue;
+    transition: 0.5s;
+}
