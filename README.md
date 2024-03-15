@@ -1,2 +1,1 @@
 POLL APPLICATION
-# poll_proj
